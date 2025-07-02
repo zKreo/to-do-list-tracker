@@ -1,10 +1,13 @@
+import ToDoList from "./to-do-list";
+import { useState } from "react";
 
 const App = () => {
+    
+    const [showingToDoList, setShowingToDoList] = useState(true);
 
     return (
         <div>
-            <h1>To-Do List Tracker</h1>
-            <p>Welcome to your personal task manager!</p>
+            <ToDoList showingToDoList = {showingToDoList} setShowingToDoList = {setShowingToDoList}/>
         </div>
     );
 }
